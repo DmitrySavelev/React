@@ -1,0 +1,27 @@
+import React from "react";
+import s from "./Navbar.module.css";
+
+
+const Navbar = () => {
+  return (
+    <nav className={s.nav}>
+      <div className={`${s.item} ${s.active}`}>
+        <a>Profile</a>
+      </div>
+      <div className={s.item}>
+        <a>Messages</a>
+      </div>
+      <div>
+        <a className={s.item}>News</a>
+      </div>
+      <div>
+        <a className={s.item}>Music</a>
+      </div>
+      <div>
+        <a className={s.item}>Settings</a>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

@@ -1,0 +1,16 @@
+.item {
+  color: whitesmoke;
+  font-weight: 900;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+
