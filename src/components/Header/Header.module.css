@@ -1,9 +1,13 @@
 .header {
   grid-area: h;
-  background-color: green;
+  background-color: #fff;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
 
 .header img {
-  width: 50px;
+  width: 30px;
 }

@@ -1,12 +1,19 @@
 .nav {
   grid-area: n;
-  background-color: blue;
+  background-color: #edf2f6;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 50px;
 }
 
 .item {
-  color: white;
+  color: #747c84;
+  text-decoration: none;
 }
 
 .active {
-  color: gold;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
 }
