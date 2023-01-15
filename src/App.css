@@ -6,13 +6,14 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
-  background-color: #FFF;
+  background-color: #fff;
+
 }
 
 .app-wrapper-content {
   grid-area: c;
-  background-color: #EDF2F6;
+  background-color: #edf2f6;
   width: 100%;
+  color: #747c84;
+  text-decoration: none;
 }
-
-

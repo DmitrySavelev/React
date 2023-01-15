@@ -3,11 +3,15 @@ import MyPosts from "./MyPosts/MyPosts";
 import s from "./Profile.module.css";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+export const Profile = (props) => {
   return (
     <main className={s.content}>
-      <ProfileInfo />
-      <MyPosts />
+      <ProfileInfo
+        newPostText={props.profilePage.newPostText}
+        addPost={props.addPost}
+        updateNewPostText={props.updateNewPostText}
+      />
+      <MyPosts profilePage={props.profilePage} />
     </main>
   );
 };

@@ -1,14 +1,14 @@
 .dialogs {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
 }
 
 .dialogsItems {
   padding: 10px;
 }
 
-.dialog {
-  /* padding: 10px; */
+.formDialogs {
+  margin-top: 30px;
 }
 
 .dialogsItems .active {
@@ -17,8 +17,4 @@
 
 .messages {
   padding: 10px;
-}
-
-.message {
-  /* padding: 10px; */
 }

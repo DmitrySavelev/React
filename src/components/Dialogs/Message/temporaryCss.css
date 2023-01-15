@@ -1,0 +1,13 @@
+.left {
+  display: flex;
+  justify-content: start;
+}
+
+.right {
+  display: flex;
+  justify-content: end;
+}
+
+.both {
+  margin-bottom: 5px;
+}

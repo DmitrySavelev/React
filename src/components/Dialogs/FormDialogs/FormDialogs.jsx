@@ -1,27 +1,20 @@
 import React from "react";
-import s from "./ProfileInfo.module.css";
+import s from "./FormDialogs.module.css";
 
-const ProfileInfo = (props) => {
+const FormDialogs = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    props.addPost();
+    props.addPostDialogs();
   };
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+    props.updateNewPostTextDialogs(text);
   };
 
   return (
-    <div className={s.wrapperProfile}>
-      <div>
-        <img
-          className={s.img}
-          src="https://jooinn.com/images/in-norway-3.jpg"
-        />
-      </div>
-      <div>ava + description</div>
+    <form className={s.formDialogs}>
       <div>
         <textarea
           placeholder="введите сообщение"
@@ -33,8 +26,8 @@ const ProfileInfo = (props) => {
       <div>
         <button onClick={addPost}>add post</button>
       </div>
-    </div>
+    </form>
   );
 };
 
-export default ProfileInfo;
+export default FormDialogs;

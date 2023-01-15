@@ -17,3 +17,11 @@
   font-weight: 700;
   text-decoration: none;
 }
+
+.article {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 7px;
+}
+

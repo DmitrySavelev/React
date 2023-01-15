@@ -1,24 +1,27 @@
-.dialogs {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-}
-
-.dialogsItems {
-  padding: 10px;
-}
-
 .dialog {
-  /* padding: 10px; */
+  display: flex;
 }
 
-.dialogsItems .active {
+.active {
   color: rgb(255, 123, 0);
 }
 
-.messages {
-  padding: 10px;
+.img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
-.message {
-  /* padding: 10px; */
+.item {
+  color: #747c84;
+  text-decoration: none;
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  margin-left: 10px;
 }
