@@ -43,12 +43,13 @@ let store = {
       ]
     },
   },
-  getState() {
-    return this._state;
-  },
   _callSubscriber() {
     console.log('state changed');
   },
+  getState() {
+    return this._state;
+  },
+
   addPost() {
     let newPost = {
       id: 10,
@@ -78,6 +79,23 @@ let store = {
   subscribe(observer) {
     this._callSubscriber = observer;
   },
+  // dispatch(action) {
+  //   if (action.type === 'ADD-POST') {
+  //     let newPost = {
+  //       id: 10,
+  //       message: this._state.profilePage.newPostText,
+  //       likeCount: 0,
+  //       src: "https://cdn.fishki.net/upload/post/201504/12/1499123/04d028a08da16fb2cc0f7bdde9b558e8.jpg",
+  //     }
+  //     this._state.profilePage.newPostText = '';
+  //     this._state.profilePage.posts.push(newPost);
+  //     this._callSubscriber(this._state);
+  //   } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+  //     this._state.profilePage.newPostText = action.newText;
+  //     this._callSubscriber(this._state);
+  //   }
+
+  // }
 }
 
 export default store;

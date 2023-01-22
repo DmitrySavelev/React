@@ -7,6 +7,7 @@ export const Profile = (props) => {
   return (
     <main className={s.content}>
       <ProfileInfo
+        // dispatch={props.dispatch}
         newPostText={props.profilePage.newPostText}
         addPost={props.addPost}
         updateNewPostText={props.updateNewPostText}
