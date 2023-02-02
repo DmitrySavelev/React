@@ -1,16 +1,20 @@
-import React from "react";
 import s from "./ProfileInfo.module.css";
+import React, { createRef } from "react";
+import {
+  addPostActionCreator,
+  updateNewPostTextActionCreator,
+} from "../../redux/state";
 
 const ProfileInfo = (props) => {
-  let newPostElement = React.createRef();
+  const newPostElement = React.useRef();
 
   let addPost = () => {
-    props.addPost();
+    props.dispatch(addPostActionCreator());
   };
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+    props.dispatch(updateNewPostTextActionCreator(text));
   };
 
   return (

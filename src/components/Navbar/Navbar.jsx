@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import FriendItems from "./FriendItems/FriendItems";
 import s from "./Navbar.module.css";

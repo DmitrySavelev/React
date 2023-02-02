@@ -1,6 +1,6 @@
 import reportWebVitals from './reportWebVitals';
-import store from './components/redux/state';
-import React, { useState } from 'react';
+import {store} from './components/redux/state';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -13,11 +13,7 @@ let rerenderEntireTree = (state) => {
     <React.StrictMode>
       <BrowserRouter>
         <App state={state}
-        // dispatch={store.dispatch.bind(store)}
-          addPost={store.addPost.bind(store)}
-          updateNewPostText={store.updateNewPostText.bind(store)}
-          addPostDialogs={store.addPostDialogs.bind(store)}
-          updateNewPostTextDialogs={store.updateNewPostTextDialogs.bind(store)}
+          dispatch={store.dispatch.bind(store)}
         />
       </BrowserRouter>
     </React.StrictMode>

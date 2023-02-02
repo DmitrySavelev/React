@@ -1,32 +1,31 @@
-import React from "react";
 import s from "./FormDialogs.module.css";
+import {
+  updateNewMessageBodyActionCreator,
+  sendMessageActionCreator,
+} from "../../redux/state";
 
 const FormDialogs = (props) => {
-  let newPostElement = React.createRef();
-
-  let addPost = () => {
-    props.addPostDialogs();
+  let onSendMessageClick = () => {
+    props.dispatch(sendMessageActionCreator());
   };
 
-  let onPostChange = () => {
-    let text = newPostElement.current.value;
-    props.updateNewPostTextDialogs(text);
+  let onNewMessageChange = (e) => {
+    let body = e.target.value;
+    props.dispatch(updateNewMessageBodyActionCreator(body));
   };
-
   return (
-    <form className={s.formDialogs}>
+    <div className={s.formDialogs}>
       <div>
         <textarea
           placeholder="введите сообщение"
-          onChange={onPostChange}
-          ref={newPostElement}
-          value={props.newPostText}
+          onChange={onNewMessageChange}
+          value={props.newMessageBody}
         />
       </div>
       <div>
-        <button onClick={addPost}>add post</button>
+        <button onClick={onSendMessageClick}>add post</button>
       </div>
-    </form>
+    </div>
   );
 };
 
