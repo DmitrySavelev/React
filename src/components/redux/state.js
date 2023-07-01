@@ -49,21 +49,17 @@ export let store = {
     },
   },
 
-
-
-
-
   _callSubscriber() {
     console.log('state changed');
   },
+
   getState() {
     return this._state;
   },
+
   subscribe(observer) {
     this._callSubscriber = observer;
   },
-
-
 
   dispatch(action) {
     if (action.type === ADD_POST) {
